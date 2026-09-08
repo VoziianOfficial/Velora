@@ -1,4 +1,4 @@
-/* One brand configuration across every page. */
+
 (() => {
   'use strict';
   const config = window.SiteConfig || {};

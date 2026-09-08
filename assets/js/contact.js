@@ -1,4 +1,4 @@
-/* Submit only once; success requires a positive JSON response from PHP. */
+
 (() => {
   'use strict';
   const form = document.querySelector('form');

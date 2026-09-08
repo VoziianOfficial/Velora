@@ -1,4 +1,4 @@
-/* Touch/keyboard equivalents and offscreen animation pausing. */
+
 (() => {
  'use strict';
  document.querySelectorAll('.flip-card').forEach(card => {
@@ -21,7 +21,7 @@
   document.querySelectorAll('.section').forEach(el=>observer.observe(el));
  }
 })();
-/* A planning choice carries through to the enquiry form. */
+
 (() => {
  const section=document.querySelector('.pricing-section');if(!section)return;
  let rhythm='once';

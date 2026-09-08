@@ -1,4 +1,4 @@
-/* Carpet-specific experiences: keyboard/touch equivalents, no scroll interception. */
+
 (() => {
   'use strict';
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
@@ -9,7 +9,7 @@
     async function show(index) {
       const ticket = ++request;
       const image = panels[index].querySelector('img');
-      try { await image.decode(); } catch { /* Loaded fallback stays visible on network failure. */ }
+      try { await image.decode(); } catch {  }
       if (ticket !== request || !image.naturalWidth) return;
       tabs.forEach((tab, i) => {
         tab.setAttribute('aria-selected', String(i === index));
@@ -30,7 +30,7 @@
         if (next !== undefined) { event.preventDefault(); tabs[next].focus(); show(next); }
       });
     });
-    // Decode locally hosted photographs before the selector is reached.
+
     const preload = () => panels.forEach(panel => {
       const image = panel.querySelector('img');
       image.loading = 'eager';

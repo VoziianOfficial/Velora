@@ -1,4 +1,4 @@
-/* Velora — shared design tokens and foundations */
+
 @font-face {
   font-family: Kanit;
   src: url('../fonts/kanit-regular.woff2') format('woff2');
@@ -73,7 +73,7 @@ svg { width: 25px; height: 25px; flex-shrink: 0; }
 .btn-light:hover, .dark .btn:hover { background: #f6edf0; box-shadow: 0 8px 0 #c4aab4; }
 .quiet-link { padding: 8px 0; font-weight: 600; border-bottom: 1px solid var(--wine); }
 .text-button { padding: 0; border: 0; border-radius: 8px; color: inherit; background: transparent; text-decoration: underline; text-underline-offset: 3px; }
-/* Sticky header and tactile navigation */
+
 header { position: sticky; top: 0; height: var(--header); z-index: 50; background: var(--wine-dark); color: #fff; box-shadow: 0 6px 22px #210b1920; }
 .header-inner { display: flex; align-items: center; justify-content: space-between; height: 100%; gap: 28px; }
 .brand { display: grid; grid-template-columns: 48px auto; grid-template-rows: 35px 13px; column-gap: 10px; align-items: center; width: max-content; }
@@ -98,7 +98,7 @@ header { position: sticky; top: 0; height: var(--header); z-index: 50; backgroun
 .nav-services:hover .nav-dropdown, .nav-services:focus-within .nav-dropdown, .nav-services.open .nav-dropdown { display: block; animation: content-rise .2s both; }
 .menu-toggle { display: none; padding: 10px; border: 0; border-radius: 12px; background: #ffffff10; color: #fff; }
 .menu-toggle span { display: block; width: 25px; height: 2px; margin: 6px 0; background: currentColor; transition: transform .25s; }
-/* Photographic heroes: solid overlay, stable type layout, continuous vacuum pass */
+
 .photo-hero { position: relative; isolation: isolate; overflow: hidden; min-height: 620px; display: grid; align-items: center; text-align: center; color: #fff; background: #342829; }
 .hero-background { position: absolute; z-index: -3; inset: 0; width: 100%; height: 112%; object-fit: cover; object-position: center 72%; }
 .index-hero .hero-background { object-position: center 80%; }
@@ -116,7 +116,7 @@ header { position: sticky; top: 0; height: var(--header); z-index: 50; backgroun
 .vacuum-traveller { position: absolute; left: 0; bottom: 0; width: 130px; animation: vacuum-pass 19s linear infinite; will-change: transform; }
 .vacuum-traveller img { width: 100%; height: 116px; object-fit: contain; object-position: bottom; filter: drop-shadow(5px 5px 3px #00000045); }
 .photo-hero.motion-paused .vacuum-traveller { animation-play-state: paused; }
-/* Rounded cards, even content distribution and supporting photography */
+
 .feature { display: flex; flex-direction: column; align-items: flex-start; height: 100%; padding: 31px; border: 1px solid var(--line); border-radius: var(--radius); background: #fff; box-shadow: var(--shadow); transition: transform .3s, box-shadow .3s, border-color .3s; }
 .feature:hover { transform: translateY(-6px); border-color: #ba8697; box-shadow: 0 24px 42px -22px #42162955, 0 6px 0 #ddc5cf; }
 .feature h3 { margin-top: 24px; color: var(--wine); font-size: 25px; min-height: 2.2em; }
@@ -179,7 +179,7 @@ header { position: sticky; top: 0; height: var(--header); z-index: 50; backgroun
 .editorial h3 { font-size: 27px; }
 .editorial p { margin-bottom: 0; font-size: 15px; }
 .faq-layout { align-items: start; }
-/* Continuous, container-bound marquee with local cleaning icons */
+
 .marquee-wrap { padding: 20px 0; }
 .marquee { overflow: hidden; border-radius: 23px; background: var(--wine); color: #fff; box-shadow: 0 7px 0 #4f1327, 0 16px 30px -20px #42162970; user-select: none; }
 .marquee-track { display: flex; width: max-content; animation: marquee-flow 36s linear infinite; }
@@ -187,7 +187,7 @@ header { position: sticky; top: 0; height: var(--header); z-index: 50; backgroun
 .marquee span { font: 400 29px/1.2 Kanit; white-space: nowrap; }
 .marquee .decor-icon { width: 38px; height: 38px; object-fit: contain; filter: invert(1); }
 .marquee:hover .marquee-track { animation-play-state: paused; }
-/* Contact and footer */
+
 .contact { border-radius: 44px 44px 0 0; }
 .contact-layout { display: grid; grid-template-columns: .85fr 1.15fr; align-items: start; gap: 65px; }
 .contact .section-heading { margin-bottom: 23px; }
@@ -228,7 +228,7 @@ footer { padding: 48px 0 0; background: #170b10; color: #fff; }
 .page-transition.active { transform: translateY(0); }
 .transition-mark { color: #fff; animation: float-soft 1s infinite; }
 .transition-mark svg { width: 65px; height: 65px; }
-/* Service-specific content */
+
 .breadcrumb { display: inline-block; margin-bottom: 24px; color: var(--wine); font-size: 13px; }
 .material-tabs { border: 1px solid var(--line); border-radius: 28px; overflow: hidden; background: #fff; box-shadow: var(--shadow); }
 [role='tablist'] { display: flex; gap: 10px; padding: 12px; border-bottom: 1px solid var(--line); background: var(--soft); }
@@ -264,7 +264,7 @@ footer { padding: 48px 0 0; background: #170b10; color: #fff; }
 .service-cta h2 { font-size: clamp(32px,3.2vw,49px); }
 .cta-photo { height: 100%; min-height: 430px; overflow: hidden; }
 .cta-photo img { height: 112%; width: 100%; object-position: center 75%; }
-/* Legal pages — readable raised panels and low-contrast sweeping icons */
+
 .legal-hero { position: relative; isolation: isolate; overflow: hidden; background: var(--soft); padding: 64px 0; text-align: center; }
 .legal-hero .container { position: relative; z-index: 1; }
 .legal-hero h1 { margin-bottom: 18px; font-size: clamp(40px,5vw,70px); color: var(--wine); }

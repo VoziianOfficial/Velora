@@ -15,14 +15,14 @@ if (!in_array($service,['Carpet cleaning','Rug cleaning','Carpet & rug cleaning'
 if ($location==='' || strlen($location)>120) respond(422,false,'Please enter your town or postcode.');
 if (strlen($message)<10 || strlen($message)>5000) respond(422,false,'Please enter a message between 10 and 5000 characters.');
 if (field('privacy_consent')!=='1') respond(422,false,'Please accept the Privacy Policy.');
-// config.js is JSON assigned to window.SiteConfig. Parse it as data; never execute JavaScript.
+
 $raw=@file_get_contents(__DIR__.'/config/config.js');
 if (!$raw || !preg_match('/^\s*window\.SiteConfig\s*=\s*(\{.*\})\s*;?\s*$/s',$raw,$matches)) respond(503,false,'The enquiry service is temporarily unavailable.');
 $config=json_decode($matches[1],true);
 $recipient=$config['email']??'';
 if (!is_string($recipient) || !filter_var($recipient,FILTER_VALIDATE_EMAIL)) respond(503,false,'The enquiry service is temporarily unavailable.');
 if (preg_match('/\.(example|test|invalid)$/i',substr(strrchr($recipient,'@'),1))) respond(503,false,'The enquiry service is being set up. Please try again later.');
-// Basic per-address throttling, outside the public website directory. Store only a salted hash.
+
 $rateFile=sys_get_temp_dir().'/carpet-form-'.hash('sha256',__DIR__.($_SERVER['REMOTE_ADDR']??'unknown')).'.lock';
 $handle=@fopen($rateFile,'c+');
 if (!$handle || !flock($handle,LOCK_EX)) respond(503,false,'Please try again shortly.');

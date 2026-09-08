@@ -1,4 +1,4 @@
-/* Stable typography, compositor-only motion and container-bound carousels. */
+
 (() => {
   'use strict';
   const preference = matchMedia('(prefers-reduced-motion: reduce)');
@@ -120,7 +120,7 @@
   updateScroll();
   back.addEventListener('click', () => scrollTo({ top: 0, behavior: preference.matches ? 'instant' : 'smooth' }));
 
-  // Stop decorative motion when it cannot be seen.
+
   const hero = document.querySelector('.photo-hero');
   if (hero && 'IntersectionObserver' in window) {
     new IntersectionObserver(entries => {

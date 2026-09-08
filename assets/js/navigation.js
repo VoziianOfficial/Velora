@@ -1,4 +1,4 @@
-/* Navigation, cookie preferences and page transitions. */
+
 (() => {
   'use strict';
   const toggle = document.querySelector('.menu-toggle');
@@ -52,7 +52,7 @@
   document.querySelectorAll('[data-consent]').forEach(button => {
     button.addEventListener('click', () => {
       try { localStorage.setItem(storageKey, JSON.stringify({ choice: button.dataset.consent, time: Date.now() })); }
-      catch { /* Preferences still apply for this page if storage is unavailable. */ }
+      catch {  }
       banner.hidden = true;
     });
   });
