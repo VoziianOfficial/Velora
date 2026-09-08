@@ -6,6 +6,12 @@
     opacity: .6;
 }
 
+.photo-hero h1 {
+    max-width: none;
+    font-size: clamp(50px, 5.4vw, 84px);
+    white-space: nowrap;
+}
+
 .decorated-services {
     padding-bottom: 125px;
 }
@@ -189,6 +195,10 @@
 }
 
 @media(max-width:700px) {
+    .photo-hero h1 {
+        font-size: clamp(24px, 7vw, 42px);
+    }
+
     .hose-prop {
         top: auto;
         bottom: 5px;
