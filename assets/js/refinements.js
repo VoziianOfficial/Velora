@@ -1,9 +1,49 @@
 
 (() => {
  'use strict';
+ const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
  document.querySelectorAll('.flip-card').forEach(card => {
   card.addEventListener('click', e => { if (!e.target.closest('a,button')) card.classList.toggle('is-flipped'); });
   card.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); card.classList.toggle('is-flipped'); } });
+ });
+ document.querySelectorAll('.accordion details').forEach(detail => {
+  const summary = detail.querySelector('summary');
+  const content = summary?.nextElementSibling;
+  if (!summary || !content) return;
+  let animation;
+  const finish = open => {
+   detail.open = open;
+   detail.classList.remove('is-opening', 'is-closing', 'is-fading');
+   detail.style.height = '';
+   detail.style.overflow = '';
+   animation = null;
+  };
+  const toggle = open => {
+   if (reducedMotion.matches) return finish(open);
+   if (animation) {
+    animation.oncancel = null;
+    animation.cancel();
+   }
+   const startHeight = `${detail.offsetHeight}px`;
+   if (open) detail.open = true;
+   detail.classList.toggle('is-opening', open);
+   detail.classList.toggle('is-closing', !open);
+   detail.classList.remove('is-fading');
+   const endHeight = open ? `${summary.offsetHeight + content.offsetHeight}px` : `${summary.offsetHeight}px`;
+   detail.style.height = startHeight;
+   detail.style.overflow = 'hidden';
+   if (!open) requestAnimationFrame(() => detail.classList.add('is-fading'));
+   animation = detail.animate({ height: [startHeight, endHeight] }, {
+    duration: open ? 380 : 280,
+    easing: 'cubic-bezier(.22, 1, .36, 1)'
+   });
+   animation.onfinish = () => finish(open);
+   animation.oncancel = () => finish(detail.open);
+  };
+  summary.addEventListener('click', event => {
+   event.preventDefault();
+   toggle(!detail.open);
+  });
  });
  document.querySelectorAll('.reason-grid article').forEach(card => {
   const toggle=()=>card.classList.toggle('is-active');
