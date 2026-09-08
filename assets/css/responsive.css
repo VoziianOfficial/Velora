@@ -577,6 +577,12 @@
     border-radius: 17px;
   }
 
+  .accordion {
+    position: static;
+    max-height: none;
+    overflow: visible;
+  }
+
   .accordion summary {
     font-size: 21px;
     text-align: left;

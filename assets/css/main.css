@@ -161,7 +161,16 @@ header { position: sticky; top: 0; height: var(--header); z-index: 50; backgroun
 .slider-controls button { display: grid; place-items: center; width: 48px; height: 48px; border: 1px solid #d7bfc8; border-radius: 50%; background: #fff; color: var(--wine); box-shadow: 0 4px 0 #e8d8df; transition: transform .25s, background .25s; }
 .slider-controls button:hover { transform: translateY(-3px); background: var(--wine); color: #fff; }
 .slider-controls .prev svg { transform: rotate(180deg); }
-.accordion { display: grid; gap: 13px; }
+.accordion {
+  position: sticky;
+  top: calc(var(--header) + 24px);
+  display: grid;
+  align-self: start;
+  gap: 13px;
+  max-height: calc(100vh - var(--header) - 48px);
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
 .accordion details { border: 1px solid var(--line); border-radius: 19px; background: #fff; padding: 0 23px; box-shadow: 0 5px 0 #eadce275; transition: border-color .25s, box-shadow .25s; }
 .accordion details:hover, .accordion details[open] { border-color: #ba8697; box-shadow: 0 5px 0 #e2cad3; }
 .accordion summary { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 23px 0; list-style: none; cursor: pointer; font: 400 22px/1.35 Kanit; }
@@ -195,12 +204,74 @@ header { position: sticky; top: 0; height: var(--header); z-index: 50; backgroun
 form { padding: 31px; border: 1px solid #6b4252; border-radius: 28px; background: #3a1725; box-shadow: 0 8px 0 #16090f; }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
 form label { display: block; margin-bottom: 18px; color: inherit; font-size: 14px; }
-input, textarea, select { display: block; width: 100%; margin-top: 7px; border: 1px solid #806071; border-radius: 12px; padding: 12px 14px; background: #ffffff08; color: #fff; font-size: 16px; line-height: 1.6; }
-input::placeholder, textarea::placeholder { color: #c7afb9; }
+input, textarea, select {
+  display: block;
+  width: 100%;
+  margin-top: 7px;
+  border: 1px solid #806071;
+  border-radius: 12px;
+  padding: 12px 14px;
+  appearance: none;
+  background: #ffffff08;
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.6;
+  box-shadow: inset 0 1px 0 #ffffff10;
+  transition: border-color .2s, background .2s, box-shadow .2s;
+}
+input:hover, textarea:hover, select:hover { border-color: #aa7b8c; background-color: #ffffff0d; }
+input:focus, textarea:focus, select:focus {
+  outline: 0;
+  border-color: #dfb7c5;
+  background-color: #ffffff12;
+  box-shadow: 0 0 0 4px #bc798d38, inset 0 1px 0 #ffffff18;
+}
+input::placeholder, textarea::placeholder { color: #c7afb9; opacity: 1; }
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #fff;
+  box-shadow: 0 0 0 1000px #442031 inset, 0 0 0 4px #bc798d38;
+  caret-color: #fff;
+}
+select {
+  padding-right: 46px;
+  background-image: linear-gradient(45deg, transparent 50%, #e8c6d2 50%), linear-gradient(135deg, #e8c6d2 50%, transparent 50%);
+  background-position: calc(100% - 22px) 50%, calc(100% - 15px) 50%;
+  background-size: 7px 7px, 7px 7px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+select:invalid { color: #c7afb9; }
 select option { background: #fff; color: var(--ink); }
 textarea { min-height: 112px; resize: vertical; }
 .consent { display: flex; align-items: flex-start; gap: 10px; color: #dacbd1; font-size: 12px; line-height: 1.55; }
-.consent input { flex-shrink: 0; width: 16px; height: 16px; margin: 3px 0 0; accent-color: var(--wine); }
+.consent input {
+  position: relative;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  margin: 2px 0 0;
+  padding: 0;
+  border-color: #a77a8a;
+  border-radius: 5px;
+  background: #ffffff10;
+  cursor: pointer;
+}
+.consent input:checked {
+  border-color: #f2d8e1;
+  background: #fff;
+}
+.consent input:checked::after {
+  content: "";
+  width: 5px;
+  height: 9px;
+  border: solid var(--wine);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg) translate(-1px, -1px);
+}
 .consent a { text-decoration: underline; }
 .form-status { margin: 18px 0 0; font-size: 14px; }
 .honeypot { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
