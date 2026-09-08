@@ -1,0 +1,22 @@
+Generated using built-in image_gen tool, imagegen skill. All final images 1536 x 1024.
+
+carpet-inspection.png
+Prompt: Use case: photorealistic-natural. Website editorial photograph, landscape 3:2. Closeup of real-looking hands gently parting and inspecting pale ivory fitted wool carpet fibers. Black cotton work sleeve. Natural skin creases, credible anatomy, honest dense wool texture. Soft window light, quiet premium editorial photography. No face, no text, no logos, no staged glossy advertising look.
+
+rug-care-label.png
+Prompt: Use case: photorealistic-natural. Website editorial photograph, landscape 3:2. Closeup of folded antique neutral beige wool rug corner with a real-looking hand reading a small BLANK care label on its underside. Black cotton sleeve, honest worn textile texture and subtle traditional weaving, soft window light. No face, no readable text or writing anywhere, no logos. Natural restrained editorial photography.
+
+material-burgundy.png
+Prompt: Use case: photorealistic-natural. Landscape 3:2 macro photograph of muted burgundy high-quality wool rug, viewed directly top-down, frame entirely filled with textile. Subtle woven border along edge within composition, richly tactile wool yarn, understated faded wine-red colors and tiny natural fiber variations. Soft diffuse daylight. No room, objects, hands, text or logos.
+
+material-synthetic.png
+Prompt: Use case: photorealistic-natural. Website material texture photograph landscape 3:2. Natural macro photo entirely filled by neutral taupe short pile synthetic carpet viewed directly top down. Credible fine short fibers, dense tuft structure, soft subtle variation, understated premium editorial style, diffuse natural daylight, no room no objects no text no logos.
+
+material-wool.png
+Prompt: Use case: photorealistic-natural. Website material texture photograph landscape 3:2. Natural macro photo entirely filled by undyed warm ivory wool thick loop carpet viewed directly top down. Credible chunky loops and slight natural wool fiber variation, tactile depth, understated premium editorial style, diffuse natural daylight, no room no objects no text no logos.
+
+cleaning-objects-white.png (FINAL usable sheet)
+Initial prompt: Use case: product-mockup. A cohesive professional product photography sprite sheet on genuinely TRANSPARENT background with alpha. SIX widely separated fully visible objects, organized into exactly 3 columns and 2 rows, generous empty transparent gutters allowing cropping each object separately, no overlaps. Top-left carpet scrub brush with a little white foam. Top-middle looping black vacuum hose. Top-right matte muted burgundy bucket containing scrub brush and sponge. Bottom-left ivory soap bar with white foam. Bottom-middle professional carpet extraction vacuum with hose and wand, unbranded dark gray with muted burgundy accent. Bottom-right rectangular muted burgundy carpet with fringe hanging vertically, whole rug visible. Consistent soft studio lighting, photoreal materials, neutral perspective, all objects floating separately as clean cutouts. No floor, no backdrop, no text, no labels, no logos, no extra objects. Wide landscape sheet.
+Refinement: requested exact equal-cell 3 columns by 2 rows; objects centered within cells with padding; background removal. Alpha failed and produced checkerboard RGB. Do NOT use cleaning-objects-sheet.png (failed checkerboard version).
+Final built-in edit prompt: Replace the entire checkered background with perfectly flat pure white RGB 255 255 255. Every empty background pixel WHITE. NO CHECKERBOARD, NO TRANSPARENCY, NO SHADOWS, NO GLOW. Keep the six product objects unchanged in same 3x2 layout. Pure white seamless catalog product sheet.
+All six objects visually verified. White fallback is intentional because built-in alpha requests did not yield usable transparency.

@@ -1,0 +1,72 @@
+/* Compact heroes with a quiet brand-colored outline. */
+.photo-hero { min-height:560px; }
+.photo-hero .hero-content { padding-top:42px;padding-bottom:250px; }
+.photo-hero h1 { font-size:clamp(42px,4.7vw,72px);-webkit-text-stroke:.7px #791d35;paint-order:stroke fill;text-shadow:0 2px 5px #46132685; }
+.photo-hero .hero-content p { -webkit-text-stroke:.3px #791d35;paint-order:stroke fill;text-shadow:0 1px 3px #791d3580; }
+/* Icons are content. Ambient art is an independent SVG layer. */
+.ambient-art { position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0;border-radius:inherit;color:#8b3454;opacity:.14; }
+.section>.container { position:relative;z-index:1; }
+.ambient-svg { position:absolute;right:-20px;top:20px;width:300px;height:220px; }
+.ambient-weave { top:auto;bottom:-20px;width:390px;height:235px; }
+.dark>.ambient-art { color:#e9c7d6;opacity:.15; }
+.ambient-svg g { transform-box:fill-box;transform-origin:center; }
+.foam-orbit { animation:foam-orbit 12s ease-in-out infinite alternate; }
+.foam-rise { animation:foam-rise 8s ease-in-out infinite alternate; }
+.weave-flow { animation:weave-flow 14s ease-in-out infinite alternate; }
+.weave-cross { animation:weave-flow 19s ease-in-out infinite alternate-reverse; }
+.sweep-flow { animation:sweep-flow 13s ease-in-out infinite alternate; }
+@keyframes foam-orbit { to { transform:translate(-10px,12px) rotate(8deg); } }
+@keyframes foam-rise { to { transform:translate(7px,-18px);opacity:.5; } }
+@keyframes weave-flow { to { transform:translateX(13px) rotate(3deg); } }
+@keyframes sweep-flow { to { transform:translate(-12px,8px) rotate(-5deg); } }
+.service-info:before { display:none; }
+.flaticon-icon { width:38px!important;height:38px!important;object-fit:contain!important;filter:brightness(0) saturate(100%) invert(16%) sepia(47%) saturate(2307%) hue-rotate(319deg) brightness(88%) contrast(96%)!important; }
+.icon-disc { background:#fff;border:1px solid #e1bdcc;box-shadow:0 5px 0 #dec2ce,0 12px 22px -15px #5b1e3560; }
+.marquee-wrap .flaticon-icon { width:35px!important;height:35px!important;filter:brightness(0) invert(1)!important; }
+.offer-icon.flaticon-icon { width:55px!important;height:55px!important; }
+.values-grid .flaticon-icon { width:40px!important;height:40px!important; }
+.values-grid>div:nth-child(3) .flaticon-icon { filter:brightness(0) invert(1)!important; }
+/* Editorial cards become generous, tactile image panels. */
+.editorial { gap:30px; }
+.editorial article { border-radius:29px;overflow:hidden;background:#fff;border:1px solid #e7d5dd;box-shadow:0 8px 0 #ead7e0,0 22px 40px -28px #49132a60; }
+.editorial article>img { height:270px;transition:transform .8s,filter .5s; }
+.editorial article>div { position:relative;min-height:185px;padding:28px 30px;background:#fff;transition:background .35s; }
+.editorial article:hover { transform:translateY(-9px);box-shadow:0 13px 0 #d8aebe,0 30px 45px -25px #49132a60; }
+.editorial article:hover>img { transform:scale(1.035); }
+.editorial article:hover>div { background:#fcf4f8; }
+.editorial h3 { color:var(--wine); }
+/* Plans keep equal spacing and a clear raised edge. */
+.plan-card { display:flex;flex-direction:column;border:1px solid #d9b7c6;box-shadow:0 10px 0 #dfc2d0,0 25px 40px -27px #49132a70; }
+.plan-cap { min-height:163px;display:flex;flex-direction:column;justify-content:center; }
+.plan-body { flex:1; }.plan-body .btn { margin-top:auto; }
+.plan-card.featured { border-color:#8a3656; }
+.plan-card:hover { transform:translateY(-10px);box-shadow:0 15px 0 #c997ad,0 30px 45px -26px #49132a80; }
+.plan-card:hover .plan-cap { background:#65152e; }
+.plan-cap { transition:background .3s; }
+/* Portraits remain exact supplied photographs, framed with a more refined edge. */
+.team-grid { gap:30px;align-items:stretch; }
+.team-card { border:1px solid #dfc6d2;border-radius:170px 170px 27px 27px;padding:9px 9px 0;box-shadow:0 8px 0 #e6cfdb,0 23px 40px -28px #49132a60;display:flex;flex-direction:column; }
+.team-card>.team-photo { box-shadow:0 4px 0 #ecdde4; }
+.team-card>div:not(.team-photo) { padding:26px 11px 30px;flex:1;display:flex;flex-direction:column;align-items:center; }
+.team-card h3 { font-size:clamp(21px,1.8vw,26px);min-height:2.2em;display:flex;align-items:center;justify-content:center; }
+.team-card p { margin-bottom:0; }
+.team-actions { margin-top:auto;padding-top:23px; }
+.team-actions a { border-color:#b16b88;box-shadow:0 3px 0 #efdee6; }
+.team-card:hover { transform:translateY(-9px);border-color:#b16b88;box-shadow:0 13px 0 #d9b4c6,0 28px 40px -25px #49132a70; }
+.team-card .team-photo { transition:box-shadow .4s; }.team-card:hover .team-photo { box-shadow:0 7px 0 #d5aabc; }
+.team-card:hover h3 { color:var(--wine); }
+/* Photo section: deep floating medallions, no layout movement. */
+.photo-values { border-block:7px solid #b78398; }
+.values-grid>div { padding:15px 12px 20px;border-radius:25px;transition:background .35s,transform .35s; }
+.values-grid>div:hover { background:#542438b3;transform:translateY(-5px); }
+.values-grid .icon-disc { box-shadow:0 8px 0 #18071170,0 13px 25px #14091030; }
+.values-grid>div:not(:last-child):after { top:57px; }
+.values-grid>div:hover .icon-disc { transform:translateY(-4px) rotate(-5deg); }
+.icon-credits { font-size:12px;opacity:.8; }.icon-credits a { text-decoration:underline; }
+@media(max-width:1000px) { .editorial article>div { padding:25px; }.team-card h3 { font-size:25px; }.ambient-art { opacity:.1; } }
+@media(max-width:700px) {
+ .photo-hero { min-height:0; }.photo-hero .hero-content { padding-top:32px;padding-bottom:195px; }.photo-hero h1 { font-size:clamp(37px,9.5vw,48px);-webkit-text-stroke:.5px #791d35; }.photo-hero .hero-content p { -webkit-text-stroke:.2px #791d35; }
+ .vacuum-lane { height:190px; }.vacuum-traveller { width:215px; }.vacuum-traveller img { width:215px;height:190px;transform:scaleX(-1) skewY(5deg) translateY(9px); }
+ .editorial article>img { height:230px; }.editorial article>div { min-height:0; padding:25px; }.team-grid { gap:22px; }.team-card { border-radius:160px 160px 26px 26px; }.team-card h3 { min-height:0; }.team-card>div:not(.team-photo) { padding:24px 12px; }.team-actions { margin-top:0; }.ambient-svg { width:190px;height:150px; }.ambient-weave { width:240px; }.values-grid>div { padding:12px 5px; }
+}
+@media(prefers-reduced-motion:reduce) { .ambient-svg g { animation:none!important; }.values-grid>div:hover,.plan-card:hover,.team-card:hover,.editorial article:hover { transform:none; } }
