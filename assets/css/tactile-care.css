@@ -801,6 +801,57 @@
 }
 
 @media(max-width:700px) {
+    .benefits {
+        padding-top: 34px;
+        padding-bottom: 30px;
+    }
+
+    .benefits .grid.four {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .benefits .grid.four .feature {
+        display: grid;
+        grid-template-columns: 50px minmax(0, 1fr);
+        gap: 5px 14px;
+        align-items: start;
+        min-height: 0;
+        padding: 15px 16px;
+        text-align: left;
+        border-radius: 20px;
+        box-shadow: 0 12px 24px -20px #42162950, 0 4px 0 #eadce2;
+    }
+
+    .benefits .grid.four .feature .icon-disc {
+        position: static;
+        grid-row: 1 / span 2;
+        width: 50px;
+        height: 50px;
+        border-radius: 17px;
+    }
+
+    .benefits .grid.four .feature .flaticon-icon {
+        width: 31px;
+        height: 31px;
+        object-fit: contain;
+    }
+
+    .benefits .grid.four .feature h3 {
+        margin: 1px 0 2px;
+        padding-top: 0;
+        min-height: 0;
+        font-size: 20px;
+        line-height: 1.08;
+    }
+
+    .benefits .grid.four .feature p {
+        grid-column: 2;
+        margin: 0;
+        font-size: 14px;
+        line-height: 1.45;
+    }
+
     .soap-prop {
         width: 75px;
         right: 18px;
