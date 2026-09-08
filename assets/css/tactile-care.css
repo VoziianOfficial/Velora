@@ -948,3 +948,72 @@
         height: 16px;
     }
 }
+
+@media(max-width:700px) {
+    .quote-grid {
+        gap: 14px;
+    }
+
+    .quote-grid .feature.flip-card {
+        min-height: 0;
+        height: auto;
+        padding: 0;
+        perspective: none;
+    }
+
+    .quote-grid .flip-inner,
+    .quote-grid .feature.flip-card.is-flipped .flip-inner,
+    .quote-grid .feature.flip-card:focus-visible .flip-inner {
+        height: auto;
+        transform: none;
+        transform-style: flat;
+    }
+
+    .quote-grid .flip-front {
+        position: relative;
+        inset: auto;
+        display: grid;
+        grid-template-columns: 46px minmax(0, 1fr);
+        gap: 5px 13px;
+        min-height: 0;
+        padding: 16px 72px 17px 16px !important;
+        border-radius: 20px;
+    }
+
+    .quote-grid .flip-back {
+        display: none;
+    }
+
+    .quote-grid .icon-disc {
+        grid-row: 1 / span 2;
+        width: 46px;
+        height: 46px;
+        border-radius: 15px;
+    }
+
+    .quote-grid .flaticon-icon {
+        width: 28px;
+        height: 28px;
+        object-fit: contain;
+    }
+
+    .quote-grid .feature h3 {
+        margin: 0;
+        font-size: 22px;
+        line-height: 1.08;
+    }
+
+    .quote-grid .feature p {
+        grid-column: 2;
+        margin: 0;
+        font-size: 14px;
+        line-height: 1.45;
+    }
+
+    .quote-grid .card-brush {
+        right: 10px;
+        bottom: 8px;
+        width: 54px;
+        opacity: .34;
+    }
+}
