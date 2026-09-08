@@ -560,7 +560,11 @@
 }
 
 .tactile-faq details>div {
-    padding-inline: 23px;
+    padding: 0 23px 23px;
+}
+
+.tactile-faq .accordion p {
+    margin-bottom: 0;
 }
 
 .tactile-faq details[open]>div {

@@ -29,7 +29,8 @@
    detail.classList.toggle('is-opening', open);
    detail.classList.toggle('is-closing', !open);
    detail.classList.remove('is-fading');
-   const endHeight = open ? `${summary.offsetHeight + content.offsetHeight}px` : `${summary.offsetHeight}px`;
+   const borderHeight = detail.offsetHeight - detail.clientHeight;
+   const endHeight = open ? `${detail.scrollHeight + borderHeight}px` : `${summary.offsetHeight + borderHeight}px`;
    detail.style.height = startHeight;
    detail.style.overflow = 'hidden';
    if (!open) requestAnimationFrame(() => detail.classList.add('is-fading'));
