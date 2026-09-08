@@ -64,6 +64,44 @@
     padding-bottom: 42px;
 }
 
+.benefits .grid.four .feature,
+.service-trio .service-offer {
+    position: relative;
+    min-height: 0;
+    padding-top: 28px;
+    padding-right: 100px;
+    padding-bottom: 26px;
+}
+
+.service-trio .service-offer {
+    align-self: center;
+    height: auto;
+}
+
+.benefits .grid.four .feature .icon-disc,
+.service-trio .service-offer .offer-icon {
+    position: absolute;
+    top: 22px;
+    right: 24px;
+    margin: 0;
+}
+
+.benefits .grid.four .feature h3 {
+    min-height: 0;
+    margin-top: 0;
+    padding-top: 4px;
+}
+
+.service-trio .service-offer h3 {
+    margin-top: 0;
+    padding-top: 4px;
+}
+
+.benefits .grid.four .feature p,
+.service-trio .service-offer p {
+    line-height: 1.55;
+}
+
 .service-offer .btn {
     position: relative;
     z-index: 1;
@@ -558,6 +596,23 @@
     .service-offer .card-brush {
         width: 88px;
         opacity: .3;
+    }
+
+    .benefits .grid.four .feature,
+    .service-trio .service-offer {
+        padding: 24px 88px 24px 24px;
+        text-align: left;
+        align-items: flex-start;
+    }
+
+    .benefits .grid.four .feature .icon-disc,
+    .service-trio .service-offer .offer-icon {
+        top: 20px;
+        right: 20px;
+    }
+
+    .service-trio .service-offer .btn {
+        align-self: flex-start;
     }
 
     .decorated-services {
