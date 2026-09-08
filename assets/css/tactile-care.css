@@ -78,6 +78,20 @@
     height: auto;
 }
 
+.service-trio .service-centrepiece {
+    align-self: center;
+    min-height: 0;
+    height: 260px;
+    border-radius: 30px;
+}
+
+.service-trio .service-centrepiece img {
+    display: block;
+    height: 100%;
+    max-height: none;
+    object-fit: cover;
+}
+
 .benefits .grid.four .feature .icon-disc,
 .service-trio .service-offer .offer-icon {
     position: absolute;
@@ -613,6 +627,12 @@
 
     .service-trio .service-offer .btn {
         align-self: flex-start;
+    }
+
+    .service-trio .service-centrepiece {
+        min-height: 0;
+        height: 260px;
+        border-radius: 30px;
     }
 
     .decorated-services {
