@@ -42,7 +42,16 @@
   };
   summary.addEventListener('click', event => {
    event.preventDefault();
-   toggle(!detail.open);
+   const nextOpen = !detail.open;
+   if (nextOpen && detail.closest('.tactile-faq')) {
+    detail.closest('.accordion')?.querySelectorAll('details[open]').forEach(item => {
+     if (item !== detail) item.dispatchEvent(new Event('accordion:close'));
+    });
+   }
+   toggle(nextOpen);
+  });
+  detail.addEventListener('accordion:close', () => {
+   if (detail.open) toggle(false);
   });
  });
  document.querySelectorAll('.reason-grid article').forEach(card => {

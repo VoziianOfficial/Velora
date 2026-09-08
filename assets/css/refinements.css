@@ -197,7 +197,7 @@
     inset: 10px 15px 10px auto;
     width: 130px;
     opacity: .09;
-    background: url('../images/shared/sponge.png') 100% 0/75px auto no-repeat, url('../images/shared/carpet-brush.webp') 0 100%/85px auto no-repeat, url('../icons/soap.svg') 0 0/35px auto no-repeat;
+    background: url('../images/shared/sponge.webp') 100% 0/75px auto no-repeat, url('../images/shared/carpet-brush.webp') 0 100%/85px auto no-repeat, url('../icons/soap.svg') 0 0/35px auto no-repeat;
     pointer-events: none;
 }
 
